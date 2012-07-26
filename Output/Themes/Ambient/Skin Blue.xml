@@ -305,6 +305,19 @@
     <EnergyBeam>EnergyBeam.png</EnergyBeam>
     <DuetIcon>DuetIcon.png</DuetIcon>
     <VideoIcon>VideoIcon.png</VideoIcon>
+<!--   SkyLion add start-->	
+	<SongRatingFalse>SongRatingFalse_No.png</SongRatingFalse>
+	<SongRatingTrue_1>Stern_1.png</SongRatingTrue_1>
+	<SongRatingTrue_2>Stern_2.png</SongRatingTrue_2>
+	<SongRatingTrue_3>Stern_3.png</SongRatingTrue_3>
+	<SongRatingTrue_4>Stern_4.png</SongRatingTrue_4>
+	<SongRatingTrue_5>Stern_5.png</SongRatingTrue_5>
+	<SongRatingTrue_6>Stern_6.png</SongRatingTrue_6>
+	<SongRatingTrue_7>Stern_7.png</SongRatingTrue_7>
+	<SongRatingTrue_8>Stern_8.png</SongRatingTrue_8>
+	<SongRatingTrue_9>Stern_9.png</SongRatingTrue_9>
+	<SongRatingTrue_0>Stern_10.png</SongRatingTrue_0>
+<!--   SkyLion add end-->
     <Invisible>Invisible.png</Invisible>
     <PlayerSelector>PlayerSelector.png</PlayerSelector>
     <PreviousIcon>PreviousIcon.png</PreviousIcon>

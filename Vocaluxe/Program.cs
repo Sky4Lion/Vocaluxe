@@ -17,7 +17,8 @@ namespace Vocaluxe
     // just a small comment for the new develop branch
     static class MainProgram
     {
-        static SplashScreen _SplashScreen;
+        //SkyLion_del: static SplashScreen _SplashScreen;
+		//SkyLion comment: Führt bei Visual Studio zu einem Error und dadurch kann die Programm.cs-Datei nicht angezeigt werden.
         
         [STAThread]
         static void Main(string[] args)
@@ -58,8 +59,8 @@ namespace Vocaluxe
                 CLog.StopBenchmark(0, "Init Config");
 
                 Application.DoEvents();
-                _SplashScreen = new SplashScreen();
-                Application.DoEvents();
+                //SkyLion_del: _SplashScreen = new SplashScreen();
+                //SkyLion_del: Application.DoEvents();
 
                 // Init Draw
                 CLog.StartBenchmark(0, "Init Draw");
@@ -153,7 +154,7 @@ namespace Vocaluxe
             Application.DoEvents();
 
             // Start Main Loop
-            _SplashScreen.Close();
+            //SkyLion_del: _SplashScreen.Close();
 
             try
             {
@@ -221,8 +222,8 @@ namespace Vocaluxe
             return true;
         }
     }
-
-    class SplashScreen : Form
+//SkyLion_del_start: 
+/*    class SplashScreen : Form
     {
         Bitmap logo;
 
@@ -281,5 +282,5 @@ namespace Vocaluxe
             Graphics g = e.Graphics;
             g.DrawImage(logo, new Rectangle(0, 0, this.Width, this.Height));
         }       
-    }
+    } */ //SkyLion_del_end 
 }

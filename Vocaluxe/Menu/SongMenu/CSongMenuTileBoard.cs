@@ -19,7 +19,24 @@ namespace Vocaluxe.Menu.SongMenu
         private CStatic _DuetIcon;
         private CStatic _VideoIcon;
 
-        private STexture _CoverBigTexture;
+        //SkyLion add start:
+        private CStatic _SongRatingFalse;
+        private CStatic _SongRatingTrue_1;
+        private CStatic _SongRatingTrue_2;
+        private CStatic _SongRatingTrue_3;
+        private CStatic _SongRatingTrue_4;
+        private CStatic _SongRatingTrue_5;
+        private CStatic _SongRatingTrue_6;
+        private CStatic _SongRatingTrue_7;
+        private CStatic _SongRatingTrue_8;
+        private CStatic _SongRatingTrue_9;
+        private CStatic _SongRatingTrue_0;
+
+        private short _SongRatingImport = 1000;
+        private short _SongRatingIndex;
+        //SkyLion add end
+		
+		private STexture _CoverBigTexture;
         private STexture _CoverTexture;
 
         private CText _Artist;
@@ -82,7 +99,21 @@ namespace Vocaluxe.Menu.SongMenu
             _DuetIcon = _Theme.songMenuTileBoard.StaticDuetIcon;
             _VideoIcon = _Theme.songMenuTileBoard.StaticVideoIcon;
 
-            _Artist = _Theme.songMenuTileBoard.TextArtist;
+            //SkyLion add start:
+            _SongRatingFalse = _Theme.songMenuTileBoard.StaticSongRatingFalse;
+            _SongRatingTrue_1 = _Theme.songMenuTileBoard.StaticSongRatingTrue_1;
+            _SongRatingTrue_2 = _Theme.songMenuTileBoard.StaticSongRatingTrue_2;
+            _SongRatingTrue_3 = _Theme.songMenuTileBoard.StaticSongRatingTrue_3;
+            _SongRatingTrue_4 = _Theme.songMenuTileBoard.StaticSongRatingTrue_4;
+            _SongRatingTrue_5 = _Theme.songMenuTileBoard.StaticSongRatingTrue_5;
+            _SongRatingTrue_6 = _Theme.songMenuTileBoard.StaticSongRatingTrue_6;
+            _SongRatingTrue_7 = _Theme.songMenuTileBoard.StaticSongRatingTrue_7;
+            _SongRatingTrue_8 = _Theme.songMenuTileBoard.StaticSongRatingTrue_8;
+            _SongRatingTrue_9 = _Theme.songMenuTileBoard.StaticSongRatingTrue_9;
+            _SongRatingTrue_0 = _Theme.songMenuTileBoard.StaticSongRatingTrue_0;
+            //SkyLion add end
+			
+			_Artist = _Theme.songMenuTileBoard.TextArtist;
             _Title = _Theme.songMenuTileBoard.TextTitle;
             _SongLength = _Theme.songMenuTileBoard.TextSongLength;
         }
@@ -464,6 +495,78 @@ namespace Vocaluxe.Menu.SongMenu
                 CDraw.DrawTexture(_vidtex, new SRectF(rect.X, rect.Y, rect.Width, rect.Height, _CoverBig.Rect.Z),
                     _vidtex.color, new SRectF(bounds.X, bounds.Y, bounds.Width, bounds.Height, 0f), false); 
             }
+			
+			
+			//SkyLion add start:
+            // Sky comment: Berechnet die passende Bewertung (in Prozent)
+            // Sky comment: zulässige Bewertungen zwischen 0 und 1000; 1000 entspricht 100%
+            if (_SongRatingImport <= 0)
+            {
+                _SongRatingImport = -1;
+            }
+            //Sky comment: falls Zahl zu groß (1000 ist gerade auch noch zu groß)
+            if (_SongRatingImport >= 1000)
+            {
+                _SongRatingImport = 999;
+            }
+            // Sky comment: /100 als vorbereitung für switch case (unten); Floor rundet immer ab; Convert sorgt für eine gültige int-Zahl
+            _SongRatingIndex = Convert.ToInt16(Math.Floor((decimal)_SongRatingImport / 100));
+
+
+            // Sky comment: Choose of the right rating icon
+            _SongRatingFalse.Visible = false;
+            _SongRatingTrue_1.Visible = false;
+            _SongRatingTrue_2.Visible = false;
+            _SongRatingTrue_3.Visible = false;
+            _SongRatingTrue_4.Visible = false;
+            _SongRatingTrue_5.Visible = false;
+            _SongRatingTrue_6.Visible = false;
+            _SongRatingTrue_7.Visible = false;
+            _SongRatingTrue_8.Visible = false;
+            _SongRatingTrue_9.Visible = false;
+            _SongRatingTrue_0.Visible = false;
+            switch (_SongRatingIndex)
+            {
+                case -1:
+                    _SongRatingFalse.Visible = true;
+                    break;
+                case 0:
+                    _SongRatingTrue_1.Visible = true;
+                    break;
+                case 1:
+                    _SongRatingTrue_2.Visible = true;
+                    break;
+                case 2:
+                    _SongRatingTrue_3.Visible = true;
+                    break;
+                case 3:
+                    _SongRatingTrue_4.Visible = true;
+                    break;
+                case 4:
+                    _SongRatingTrue_5.Visible = true;
+                    break;
+                case 5:
+                    _SongRatingTrue_6.Visible = true;
+                    break;
+                case 6:
+                    _SongRatingTrue_7.Visible = true;
+                    break;
+                case 7:
+                    _SongRatingTrue_8.Visible = true;
+                    break;
+                case 8:
+                    _SongRatingTrue_9.Visible = true;
+                    break;
+                case 9:
+                    _SongRatingTrue_0.Visible = true;
+                    break;
+                default:
+                    _SongRatingFalse.Visible = true;
+                    //Sky comment: hier vllt Eintrag im error.log?!
+                    break;
+            }
+            //SkyLion add end
+			
 
             
             _Artist.Draw();
@@ -471,6 +574,20 @@ namespace Vocaluxe.Menu.SongMenu
             _SongLength.Draw();
             _DuetIcon.Draw();
             _VideoIcon.Draw();
+			
+			//SkyLion add start:
+            _SongRatingFalse.Draw();
+            _SongRatingTrue_1.Draw();
+            _SongRatingTrue_2.Draw();
+            _SongRatingTrue_3.Draw();
+            _SongRatingTrue_4.Draw();
+            _SongRatingTrue_5.Draw();
+            _SongRatingTrue_6.Draw();
+            _SongRatingTrue_7.Draw();
+            _SongRatingTrue_8.Draw();
+            _SongRatingTrue_9.Draw();
+            _SongRatingTrue_0.Draw();
+            //SkyLion add end
                       
         }
 
@@ -657,6 +774,20 @@ namespace Vocaluxe.Menu.SongMenu
             _Theme.songMenuTileBoard.StaticTextBG.ReloadTextures();
             _Theme.songMenuTileBoard.StaticDuetIcon.ReloadTextures();
             _Theme.songMenuTileBoard.StaticVideoIcon.ReloadTextures();
+			
+			//SkyLion add start:
+            _Theme.songMenuTileBoard.StaticSongRatingFalse.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_1.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_2.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_3.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_4.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_5.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_6.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_7.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_8.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_9.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_0.ReloadTextures();
+            //SkyLion add end
 
             _Theme.songMenuTileBoard.TextArtist.ReloadTextures();
             _Theme.songMenuTileBoard.TextTitle.ReloadTextures();

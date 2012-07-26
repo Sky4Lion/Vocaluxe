@@ -26,6 +26,20 @@ namespace Vocaluxe.Menu.SongMenu
         //public SThemeSongMenuDreidel songMenuDreidel;
         //public SThemeSongMenuList songMenuList;
         public SThemeSongMenuTileBoard songMenuTileBoard;
+		
+		//SkyLion add start:
+        public string SongRatingFalseName;
+        public string SongRatingTrue_1Name;
+        public string SongRatingTrue_2Name;
+        public string SongRatingTrue_3Name;
+        public string SongRatingTrue_4Name;
+        public string SongRatingTrue_5Name;
+        public string SongRatingTrue_6Name;
+        public string SongRatingTrue_7Name;
+        public string SongRatingTrue_8Name;
+        public string SongRatingTrue_9Name;
+        public string SongRatingTrue_0Name;
+        //SkyLion add end
     }
 
     struct SThemeSongMenuBook
@@ -72,6 +86,20 @@ namespace Vocaluxe.Menu.SongMenu
         public CStatic StaticTextBG;
         public CStatic StaticDuetIcon;
         public CStatic StaticVideoIcon;
+		
+		//SkyLion add start:
+        public CStatic StaticSongRatingFalse;
+        public CStatic StaticSongRatingTrue_1;
+        public CStatic StaticSongRatingTrue_2;
+        public CStatic StaticSongRatingTrue_3;
+        public CStatic StaticSongRatingTrue_4;
+        public CStatic StaticSongRatingTrue_5;
+        public CStatic StaticSongRatingTrue_6;
+        public CStatic StaticSongRatingTrue_7;
+        public CStatic StaticSongRatingTrue_8;
+        public CStatic StaticSongRatingTrue_9;
+        public CStatic StaticSongRatingTrue_0;
+        //SkyLion add end
     }
 
     abstract class CSongMenuFramework : ISongMenu
@@ -225,6 +253,20 @@ namespace Vocaluxe.Menu.SongMenu
             _Theme.songMenuTileBoard.StaticTextBG = new CStatic();
             _Theme.songMenuTileBoard.StaticDuetIcon = new CStatic();
             _Theme.songMenuTileBoard.StaticVideoIcon = new CStatic();
+			
+			//SkyLion add start:
+            _Theme.songMenuTileBoard.StaticSongRatingFalse = new CStatic();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_1 = new CStatic();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_2 = new CStatic();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_3 = new CStatic();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_4 = new CStatic();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_5 = new CStatic();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_6 = new CStatic();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_7 = new CStatic();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_8 = new CStatic();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_9 = new CStatic();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_0 = new CStatic();
+            //SkyLion add end
 
             _ThemeLoaded = false;
         }
@@ -238,8 +280,21 @@ namespace Vocaluxe.Menu.SongMenu
             _ThemeLoaded &= CHelper.GetValueFromXML(item + "/CoverBigBackground", navigator, ref _Theme.CoverBigBackgroundName, String.Empty);
             _ThemeLoaded &= CHelper.GetValueFromXML(item + "/DuetIcon", navigator, ref _Theme.DuetIconName, String.Empty);
             _ThemeLoaded &= CHelper.GetValueFromXML(item + "/VideoIcon", navigator, ref _Theme.VideoIconName, String.Empty);
-
-
+	
+			//SkyLion add start:
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingFalse", navigator, ref _Theme.SongRatingFalseName, String.Empty);
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingTrue_1", navigator, ref _Theme.SongRatingTrue_1Name, String.Empty);
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingTrue_2", navigator, ref _Theme.SongRatingTrue_2Name, String.Empty);
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingTrue_3", navigator, ref _Theme.SongRatingTrue_3Name, String.Empty);
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingTrue_4", navigator, ref _Theme.SongRatingTrue_4Name, String.Empty);
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingTrue_5", navigator, ref _Theme.SongRatingTrue_5Name, String.Empty);
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingTrue_6", navigator, ref _Theme.SongRatingTrue_6Name, String.Empty);
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingTrue_7", navigator, ref _Theme.SongRatingTrue_7Name, String.Empty);
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingTrue_8", navigator, ref _Theme.SongRatingTrue_8Name, String.Empty);
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingTrue_9", navigator, ref _Theme.SongRatingTrue_9Name, String.Empty);
+            _ThemeLoaded &= CHelper.GetValueFromXML(item + "/SongRatingTrue_0", navigator, ref _Theme.SongRatingTrue_0Name, String.Empty);
+            //SkyLion add end
+			
             _ThemeLoaded &= CHelper.TryGetFloatValueFromXML(item + "/X", navigator, ref _Rect.X);
             _ThemeLoaded &= CHelper.TryGetFloatValueFromXML(item + "/Y", navigator, ref _Rect.Y);
             _ThemeLoaded &= CHelper.TryGetFloatValueFromXML(item + "/Z", navigator, ref _Rect.Z);
@@ -273,7 +328,21 @@ namespace Vocaluxe.Menu.SongMenu
             _ThemeLoaded &= _Theme.songMenuTileBoard.StaticDuetIcon.LoadTheme(item + "/SongMenuTileBoard", "StaticDuetIcon", navigator, SkinIndex);
             _ThemeLoaded &= _Theme.songMenuTileBoard.StaticVideoIcon.LoadTheme(item + "/SongMenuTileBoard", "StaticVideoIcon", navigator, SkinIndex);
 
-            _ThemeLoaded &= CHelper.TryGetFloatValueFromXML(item + "/SongMenuTileBoard/TileRectX", navigator, ref _Theme.songMenuTileBoard.TileRect.X);
+            //SkyLion add start:
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingFalse.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingFalse", navigator, SkinIndex);
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingTrue_1.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingTrue_1", navigator, SkinIndex);
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingTrue_2.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingTrue_2", navigator, SkinIndex);
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingTrue_3.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingTrue_3", navigator, SkinIndex);
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingTrue_4.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingTrue_4", navigator, SkinIndex);
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingTrue_5.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingTrue_5", navigator, SkinIndex);
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingTrue_6.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingTrue_6", navigator, SkinIndex);
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingTrue_7.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingTrue_7", navigator, SkinIndex);
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingTrue_8.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingTrue_8", navigator, SkinIndex);
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingTrue_9.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingTrue_9", navigator, SkinIndex);
+            _ThemeLoaded &= _Theme.songMenuTileBoard.StaticSongRatingTrue_0.LoadTheme(item + "/SongMenuTileBoard", "StaticSongRatingTrue_0", navigator, SkinIndex);
+            //SkyLion add end
+			
+			_ThemeLoaded &= CHelper.TryGetFloatValueFromXML(item + "/SongMenuTileBoard/TileRectX", navigator, ref _Theme.songMenuTileBoard.TileRect.X);
             _ThemeLoaded &= CHelper.TryGetFloatValueFromXML(item + "/SongMenuTileBoard/TileRectY", navigator, ref _Theme.songMenuTileBoard.TileRect.Y);
             _ThemeLoaded &= CHelper.TryGetFloatValueFromXML(item + "/SongMenuTileBoard/TileRectZ", navigator, ref _Theme.songMenuTileBoard.TileRect.Z);
             _ThemeLoaded &= CHelper.TryGetFloatValueFromXML(item + "/SongMenuTileBoard/TileRectW", navigator, ref _Theme.songMenuTileBoard.TileRect.W);
@@ -309,7 +378,43 @@ namespace Vocaluxe.Menu.SongMenu
                 writer.WriteComment("<VideoIcon>: Texture name of video icon");
                 writer.WriteElementString("VideoIcon", _Theme.VideoIconName);
 
-                writer.WriteComment("<X>, <Y>, <Z>, <W>, <H>: SongMenu position, width and height");
+                //SkyLion add start:
+                //SkyLion comment: was macht das hier? hat keinen direkten sichtbaren Einfluss auf das Programm für mich
+                writer.WriteComment("<SongRatingFalse>: Texture name of Song Rating icon - no Rating");
+                writer.WriteElementString("SongRatingFalse", _Theme.SongRatingFalseName);
+
+                writer.WriteComment("<SongRatingTrue_1>: Texture name of Song Rating icon - Rating available");
+                writer.WriteElementString("SongRatingTrue_1", _Theme.SongRatingTrue_1Name);
+
+                writer.WriteComment("<SongRatingTrue_2>: Texture name of Song Rating icon - Rating available");
+                writer.WriteElementString("SongRatingTrue_2", _Theme.SongRatingTrue_2Name);
+
+                writer.WriteComment("<SongRatingTrue_3>: Texture name of Song Rating icon - Rating available");
+                writer.WriteElementString("SongRatingTrue_3", _Theme.SongRatingTrue_3Name);
+
+                writer.WriteComment("<SongRatingTrue_4>: Texture name of Song Rating icon - Rating available");
+                writer.WriteElementString("SongRatingTrue_4", _Theme.SongRatingTrue_4Name);
+
+                writer.WriteComment("<SongRatingTrue_5>: Texture name of Song Rating icon - Rating available");
+                writer.WriteElementString("SongRatingTrue_5", _Theme.SongRatingTrue_5Name);
+
+                writer.WriteComment("<SongRatingTrue_6>: Texture name of Song Rating icon - Rating available");
+                writer.WriteElementString("SongRatingTrue_6", _Theme.SongRatingTrue_6Name);
+
+                writer.WriteComment("<SongRatingTrue_7>: Texture name of Song Rating icon - Rating available");
+                writer.WriteElementString("SongRatingTrue_7", _Theme.SongRatingTrue_7Name);
+
+                writer.WriteComment("<SongRatingTrue_8>: Texture name of Song Rating icon - Rating available");
+                writer.WriteElementString("SongRatingTrue_8", _Theme.SongRatingTrue_8Name);
+
+                writer.WriteComment("<SongRatingTrue_9>: Texture name of Song Rating icon - Rating available");
+                writer.WriteElementString("SongRatingTrue_9", _Theme.SongRatingTrue_9Name);
+
+                writer.WriteComment("<SongRatingTrue_0>: Texture name of Song Rating icon - Rating available");
+                writer.WriteElementString("SongRatingTrue_0", _Theme.SongRatingTrue_0Name);
+                //SkyLion add end
+				
+				writer.WriteComment("<X>, <Y>, <Z>, <W>, <H>: SongMenu position, width and height");
                 writer.WriteElementString("X", _Rect.X.ToString("#0"));
                 writer.WriteElementString("Y", _Rect.Y.ToString("#0"));
                 writer.WriteElementString("Z", _Rect.Z.ToString("#0.00"));
@@ -362,7 +467,21 @@ namespace Vocaluxe.Menu.SongMenu
                 _Theme.songMenuTileBoard.StaticDuetIcon.SaveTheme(writer);
                 _Theme.songMenuTileBoard.StaticVideoIcon.SaveTheme(writer);
                                 
-                writer.WriteEndElement();
+                //SkyLion add start:
+                _Theme.songMenuTileBoard.StaticSongRatingFalse.SaveTheme(writer);
+                _Theme.songMenuTileBoard.StaticSongRatingTrue_1.SaveTheme(writer);
+                _Theme.songMenuTileBoard.StaticSongRatingTrue_2.SaveTheme(writer);
+                _Theme.songMenuTileBoard.StaticSongRatingTrue_3.SaveTheme(writer);
+                _Theme.songMenuTileBoard.StaticSongRatingTrue_4.SaveTheme(writer);
+                _Theme.songMenuTileBoard.StaticSongRatingTrue_5.SaveTheme(writer);
+                _Theme.songMenuTileBoard.StaticSongRatingTrue_6.SaveTheme(writer);
+                _Theme.songMenuTileBoard.StaticSongRatingTrue_7.SaveTheme(writer);
+                _Theme.songMenuTileBoard.StaticSongRatingTrue_8.SaveTheme(writer);
+                _Theme.songMenuTileBoard.StaticSongRatingTrue_9.SaveTheme(writer);
+                _Theme.songMenuTileBoard.StaticSongRatingTrue_0.SaveTheme(writer);
+                //SkyLion add end
+				
+				writer.WriteEndElement();
                 #endregion SongMenuTileBoard
 
                 writer.WriteEndElement();
@@ -497,7 +616,21 @@ namespace Vocaluxe.Menu.SongMenu
             _Theme.songMenuTileBoard.StaticDuetIcon.ReloadTextures();
             _Theme.songMenuTileBoard.StaticVideoIcon.ReloadTextures();
 
-            _Theme.songMenuTileBoard.TextArtist.ReloadTextures();
+            //SkyLion add start:
+            _Theme.songMenuTileBoard.StaticSongRatingFalse.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_1.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_2.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_3.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_4.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_5.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_6.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_7.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_8.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_9.ReloadTextures();
+            _Theme.songMenuTileBoard.StaticSongRatingTrue_0.ReloadTextures();
+            //SkyLion add end
+			
+			_Theme.songMenuTileBoard.TextArtist.ReloadTextures();
             _Theme.songMenuTileBoard.TextTitle.ReloadTextures();
         }
 

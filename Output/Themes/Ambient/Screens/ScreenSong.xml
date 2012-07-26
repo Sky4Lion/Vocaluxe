@@ -186,6 +186,30 @@
       <CoverBigBackground>CoverBackground</CoverBigBackground>
       <!--<DuetIcon>: Texture name of duet icon-->
       <DuetIcon>DuetIcon</DuetIcon>
+<!--  SkyLion add start:  -->
+	  <!--<SongRatingFalse>: Texture name of Song Rating icon - no Rating-->
+      <SongRatingFalse>SongRatingFalse</SongRatingFalse>
+	  <!--<SongRatingTrue_1>: Texture name of Song Rating icon - Rating available-->
+      <SongRatingTrue_1>SongRatingTrue_1</SongRatingTrue_1>
+	  <!--<SongRatingTrue_2>: Texture name of Song Rating icon - Rating available-->
+      <SongRatingTrue_2>SongRatingTrue_2</SongRatingTrue_2>
+	  <!--<SongRatingTrue_3>: Texture name of Song Rating icon - Rating available-->
+      <SongRatingTrue_3>SongRatingTrue_3</SongRatingTrue_3>
+	  <!--<SongRatingTrue_4>: Texture name of Song Rating icon - Rating available-->
+      <SongRatingTrue_4>SongRatingTrue_4</SongRatingTrue_4>
+	  <!--<SongRatingTrue_5>: Texture name of Song Rating icon - Rating available-->
+      <SongRatingTrue_5>SongRatingTrue_5</SongRatingTrue_5>
+	  <!--<SongRatingTrue_6>: Texture name of Song Rating icon - Rating available-->
+      <SongRatingTrue_6>SongRatingTrue_6</SongRatingTrue_6>
+	  <!--<SongRatingTrue_7>: Texture name of Song Rating icon - Rating available-->
+      <SongRatingTrue_7>SongRatingTrue_7</SongRatingTrue_7>
+	  <!--<SongRatingTrue_8>: Texture name of Song Rating icon - Rating available-->
+      <SongRatingTrue_8>SongRatingTrue_8</SongRatingTrue_8>
+	  <!--<SongRatingTrue_9>: Texture name of Song Rating icon - Rating available-->
+      <SongRatingTrue_9>SongRatingTrue_9</SongRatingTrue_9>
+	  <!--<SongRatingTrue_0>: Texture name of Song Rating icon - Rating available-->
+      <SongRatingTrue_0>SongRatingTrue_0</SongRatingTrue_0>
+<!--  SkyLion add end  -->
       <!--<VideoIcon>: Texture name of video icon-->
       <VideoIcon>VideoIcon</VideoIcon>
       <!--<X>, <Y>, <Z>, <W>, <H>: SongMenu position, width and height-->
@@ -370,6 +394,197 @@
           <!--   <Space>: Reflection Space-->
           <!--   <Height>: Reflection Height-->
         </StaticVideoIcon>
+<!--   SkyLion add start-->
+	<!--   SkyLion comment: Muss leider für jedes Bild einen Eintrag anlegen, weil ich keine flexible Breite hinbekomme -->
+		<StaticSongRatingFalse>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingFalse</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>206</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>38</W>
+		  <!-- SkyLion comment: Fehler beim Song-Screen Aufruf --> 
+		  <!--<MaxW>150</MaxW>-->  
+          <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingFalse>
+	<!--   Sky comment: 1/2 Stern   -->
+		<StaticSongRatingTrue_1>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingTrue_1</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>107</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>38</W>
+		  <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingTrue_1>
+	<!--   Sky comment: 1 Stern   -->
+		<StaticSongRatingTrue_2>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingTrue_2</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>107</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>38</W>
+		  <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingTrue_2>
+	<!--   Sky comment: 1 1/2 Sterne   -->
+		<StaticSongRatingTrue_3>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingTrue_3</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>107</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>86</W>
+		  <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingTrue_3>
+	<!--   Sky comment: 2 Sterne   -->
+		<StaticSongRatingTrue_4>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingTrue_4</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>107</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>86</W>
+		  <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingTrue_4>
+	<!--   Sky comment: 2 1/2 Sterne   -->
+		<StaticSongRatingTrue_5>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingTrue_5</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>107</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>135</W>
+		  <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingTrue_5>
+	<!--   Sky comment: 3 Sterne   -->
+		<StaticSongRatingTrue_6>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingTrue_6</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>107</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>135</W>
+		  <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingTrue_6>
+	<!--   Sky comment: 3 1/2 Sterne   -->
+		<StaticSongRatingTrue_7>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingTrue_7</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>107</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>183</W>
+		  <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingTrue_7>
+	<!--   Sky comment: 4 Sterne   -->
+		<StaticSongRatingTrue_8>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingTrue_8</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>107</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>183</W>
+		  <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingTrue_8>
+	<!--   Sky comment: 4 1/2 Sterne   -->
+		<StaticSongRatingTrue_9>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingTrue_9</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>107</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>232</W>
+		  <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingTrue_9>
+	<!--   Sky comment: 5 Sterne   -->
+		<StaticSongRatingTrue_0>
+          <!--<Skin>: Texture name-->
+          <Skin>SongRatingTrue_0</Skin>
+          <!--<X>, <Y>, <Z>, <W>, <H>: Static position, width and height-->
+          <X>107</X>
+          <Y>608</Y>
+          <Z>-1,00</Z>
+          <W>232</W>
+		  <H>36</H>
+          <!--<Color>: Static color from ColorScheme (high priority)-->
+          <!--or <R>, <G>, <B>, <A> (lower priority)-->
+          <Color>StaticColor</Color>
+          <!--<Reflection> If exists:-->
+          <!--   <Space>: Reflection Space-->
+          <!--   <Height>: Reflection Height-->
+        </StaticSongRatingTrue_0>
+<!--   SkyLion add end-->
       </SongMenuTileBoard>
     </SongMenu>
   </ScreenSong>
