@@ -514,57 +514,17 @@ namespace Vocaluxe.Menu.SongMenu
 
 
             // Sky comment: Choose of the right rating icon
-            _SongRatingFalse.Visible = false;
-            _SongRatingTrue_1.Visible = false;
-            _SongRatingTrue_2.Visible = false;
-            _SongRatingTrue_3.Visible = false;
-            _SongRatingTrue_4.Visible = false;
-            _SongRatingTrue_5.Visible = false;
-            _SongRatingTrue_6.Visible = false;
-            _SongRatingTrue_7.Visible = false;
-            _SongRatingTrue_8.Visible = false;
-            _SongRatingTrue_9.Visible = false;
-            _SongRatingTrue_0.Visible = false;
-            switch (_SongRatingIndex)
-            {
-                case -1:
-                    _SongRatingFalse.Visible = true;
-                    break;
-                case 0:
-                    _SongRatingTrue_1.Visible = true;
-                    break;
-                case 1:
-                    _SongRatingTrue_2.Visible = true;
-                    break;
-                case 2:
-                    _SongRatingTrue_3.Visible = true;
-                    break;
-                case 3:
-                    _SongRatingTrue_4.Visible = true;
-                    break;
-                case 4:
-                    _SongRatingTrue_5.Visible = true;
-                    break;
-                case 5:
-                    _SongRatingTrue_6.Visible = true;
-                    break;
-                case 6:
-                    _SongRatingTrue_7.Visible = true;
-                    break;
-                case 7:
-                    _SongRatingTrue_8.Visible = true;
-                    break;
-                case 8:
-                    _SongRatingTrue_9.Visible = true;
-                    break;
-                case 9:
-                    _SongRatingTrue_0.Visible = true;
-                    break;
-                default:
-                    _SongRatingFalse.Visible = true;
-                    //Sky comment: hier vllt Eintrag im error.log?!
-                    break;
-            }
+            _SongRatingFalse.Visible = _SongRatingIndex == -1;
+            _SongRatingTrue_1.Visible = _SongRatingIndex == 0;
+            _SongRatingTrue_2.Visible = _SongRatingIndex == 1;
+            _SongRatingTrue_3.Visible = _SongRatingIndex == 2;
+            _SongRatingTrue_4.Visible = _SongRatingIndex == 3;
+            _SongRatingTrue_5.Visible = _SongRatingIndex == 4;
+            _SongRatingTrue_6.Visible = _SongRatingIndex == 5;
+            _SongRatingTrue_7.Visible = _SongRatingIndex == 6;
+            _SongRatingTrue_8.Visible = _SongRatingIndex == 7;
+            _SongRatingTrue_9.Visible = _SongRatingIndex == 8;
+            _SongRatingTrue_0.Visible = _SongRatingIndex == 9;
             //SkyLion add end
 			
 

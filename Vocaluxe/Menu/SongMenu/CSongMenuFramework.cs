@@ -379,7 +379,6 @@ namespace Vocaluxe.Menu.SongMenu
                 writer.WriteElementString("VideoIcon", _Theme.VideoIconName);
 
                 //SkyLion add start:
-                //SkyLion comment: was macht das hier? hat keinen direkten sichtbaren Einfluss auf das Programm für mich
                 writer.WriteComment("<SongRatingFalse>: Texture name of Song Rating icon - no Rating");
                 writer.WriteElementString("SongRatingFalse", _Theme.SongRatingFalseName);
 
